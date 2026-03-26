@@ -1,1 +1,38 @@
 /* Place CSS styles here */
+
+body {
+    background-color: #000047;
+}
+
+.card {
+  width: 206px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
