@@ -272,7 +272,6 @@
       border: 0;
       border-radius: 999px;
       padding: 0.85rem 1.2rem;
-      font: inherit;
       cursor: pointer;
       transition: transform 180ms ease, opacity 180ms ease;
     }
