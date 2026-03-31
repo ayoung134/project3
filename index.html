@@ -24,9 +24,8 @@
 
 <body>
   <!-- Place your site's HTML here -->
-  <script src="js/main.js"></script>
 
-<div class="card">
+<!-- <div class="card">
   <div class="card-inner">
     <div class="card-front">
        <img src="./img/back.svg" alt="">
@@ -96,9 +95,42 @@
        <img src="./img/lovers.svg" alt="">
     </div>
   </div>
-</div>
+</div> -->
+
+<main class="page">
+    <section class="intro">
+      <h1>Three Card Reading</h1>
+      <p>
+        Start with the stacked deck. Click it to draw three random cards. Then hover or click a card to flip it and reveal an explanation beside that reading.
+      </p>
+    </section>
+
+    <section class="reading-area">
+      <div class="stars"></div>
+
+      <div class="stack-zone" id="stackZone">
+        <div class="deck" id="deck" aria-label="Draw cards" role="button" tabindex="0">
+          <div class="deck-card"></div>
+          <div class="deck-card"></div>
+          <div class="deck-card"></div>
+          <div class="deck-label">Click the deck for your reading</div>
+        </div>
+      </div>
+
+      <div class="spread" id="spread"></div>
+
+      <div class="controls">
+        <button class="draw-btn" id="drawBtn">Draw Three Cards</button>
+        <button class="reset-btn" id="resetBtn">Reset Reading</button>
+      </div>
+
+      <p class="helper">Card meanings appear when you interact with each card.</p>
+    </section>
+  </main>
+
 
   
+  <script src="js/main.js"></script>
 </body>
 
 </html>
