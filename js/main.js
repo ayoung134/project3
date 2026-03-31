@@ -132,7 +132,7 @@ const tarotDeck = [
     }
 
     deckEl.addEventListener('click', drawReading);
-    drawBtn.addEventListener('click', drawReading);
+    // drawBtn.addEventListener('click', drawReading);
     resetBtn.addEventListener('click', resetReading);
 
     deckEl.addEventListener('keydown', (event) => {
