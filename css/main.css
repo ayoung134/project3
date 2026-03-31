@@ -153,11 +153,10 @@
     .deck-card {
       position: absolute;
       inset: 0;
-      border-radius: 18px;
       border: 2px solid rgba(242, 212, 143, 0.35);
       background:
-        radial-gradient(circle at center, rgba(215,182,255,0.25), rgba(41,25,63,0.95)),
-        linear-gradient(180deg, #372057, #1a1128);
+        radial-gradient(circle at center, rgba(188, 182, 255, 0.25), rgba(41,25,63,0.95)),
+        linear-gradient(180deg, #31387f, #13132f);
       box-shadow: 0 15px 30px rgba(0,0,0,0.35);
     }
 
@@ -246,7 +245,6 @@
     .card-face {
       position: absolute;
       inset: 0;
-      border-radius: 18px;
       backface-visibility: hidden;
       overflow: hidden;
       border: 2px solid rgba(255,255,255,0.18);
@@ -256,7 +254,7 @@
     .card-back {
       background:
         radial-gradient(circle at center, rgba(242, 212, 143, 0.18), transparent 35%),
-        linear-gradient(180deg, #4f317f, #20132f);
+        linear-gradient(180deg, #31387f, #13132f);
       display: grid;
       place-items: center;
     }
@@ -290,10 +288,6 @@
       place-items: center;
       font-size: 3rem;
       text-align: center;
-      border: 2px solid rgba(31,22,48,0.12);
-      border-radius: 14px;
-      margin: 0.75rem 0;
-      background: rgba(255,255,255,0.35);
       
     }
 

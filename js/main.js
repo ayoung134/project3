@@ -14,28 +14,45 @@
 const tarotDeck = [
       {
         name: 'The Fool',
-        art: '☼',
-        keyword: 'Beginnings and trust',
-        meaning: 'This card points to a fresh path. It suggests curiosity, openness, and the courage to step forward before every detail is known.'
+        meaning: 'This card points to a fresh path. It suggests curiosity, openness, and the courage to step forward before every detail is known.',
+        frontImage: './img/fool.svg',
+        backImage: './img/back/svg',
       },
       {
         name: 'The High Priestess',
-        art: '☾',
-        keyword: 'Intuition and inner knowing',
-        meaning: 'This card asks you to slow down and listen more deeply. Some answers are felt before they are fully explained.'
+        meaning: 'This card asks you to slow down and listen more deeply. Some answers are felt before they are fully explained.',
+        frontImage: './img/highpriestess.svg',
+        backImage: './img/back/svg',
       },
       {
         name: 'The Empress',
-        art: '❀',
-        keyword: 'Growth and nurture',
-        meaning: 'The Empress represents care, creativity, and abundance. It can suggest tending to what you want to grow with patience and warmth.'
-      }      
+        meaning: 'The Empress represents care, creativity, and abundance. It can suggest tending to what you want to grow with patience and warmth.',
+        frontImage: './img/empress.svg',
+        backImage: './img/back/svg',
+      },
+      {
+        name: 'Death',
+        meaning: 'This card represents endings, transformation, and renewal. It can suggest closing one chapter to begin another.',
+        frontImage: './img/death.svg',
+        backImage: './img/back/svg',
+      }, 
+     {
+        name: 'The Lovers',
+        meaning: 'This card represents connection, choice, and alignment. It can suggest forming meaningful bonds or making heartfelt decisions.',
+        frontImage: './img/lovers.svg',
+        backImage: './img/back/svg',
+      },
+    {
+        name: 'Justice',
+        meaning: 'Justice represents fairness, truth, and accountability. It can suggest weighing decisions carefully and acting with integrity.',
+        frontImage: './img/justice.svg',
+        backImage: './img/back/svg',
+      },   
     ];
 
     const positions = ['Past', 'Present', 'Future'];
 
     const deckEl = document.getElementById('deck');
-    const drawBtn = document.getElementById('drawBtn');
     const resetBtn = document.getElementById('resetBtn');
     const spreadEl = document.getElementById('spread');
     const stackZone = document.getElementById('stackZone');
@@ -56,11 +73,11 @@ const tarotDeck = [
         <div class="card-title">${positionLabel}</div>
         <div class="tarot-card" data-index="${index}" tabindex="0" role="button" aria-label="Reveal ${card.name}">
           <div class="tarot-inner">
-            <div class="card-face card-back"></div>
+            <div class="card-face card-back">
+                <img src="${card.backImage}">
+            </div>
             <div class="card-face card-front">
-              <div class="name">${card.name}</div>
-              <div class="art">${card.art}</div>
-              <div class="keyword">${card.keyword}</div>
+              <img src="${card.frontImage}">
             </div>
           </div>
         </div>
