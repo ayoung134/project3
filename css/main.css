@@ -282,6 +282,10 @@
         grid-template-columns: 1fr;
       }
 
+      .controls {
+        min-height: auto;
+      }
+
       .card-slot {
         min-height: auto;
       }
