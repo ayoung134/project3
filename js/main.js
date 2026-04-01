@@ -45,6 +45,8 @@ const tarotDeck = [
     const resetBtn = document.getElementById('resetBtn');
     const spreadEl = document.getElementById('spread');
     const stackZone = document.getElementById('stackZone');
+    const resetImg = document.getElementById("resetImg");
+    
 
     function shuffle(array) {
       const copy = [...array];
@@ -134,6 +136,13 @@ const tarotDeck = [
     deckEl.addEventListener('click', drawReading);
     // drawBtn.addEventListener('click', drawReading);
     resetBtn.addEventListener('click', resetReading);
+    resetBtn.addEventListener("click", () => {  
+      resetImg.src = "./img/thirdeyeclosed.svg";
+
+    setTimeout(() => {
+      resetImg.src = "./img/thirdeyeopen.svg";
+     },  300);
+    });
 
     deckEl.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -141,3 +150,4 @@ const tarotDeck = [
         drawReading();
       }
     });
+    
