@@ -264,10 +264,11 @@
     }
 
     .reset-btn {
-      background: #3a161649;
       margin-top: 15px;
       width: 100px;
       height: 100px;
+      border: 0;
+      background-color: transparent;
     }
 
     .helper {
