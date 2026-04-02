@@ -126,7 +126,7 @@
       position: absolute;
       overflow: hidden;
       width: 204px;
-      height: 346px;
+      height: 348px;
     }
 
     .deck-card:nth-child(1) { transform: translateY(14px) rotate(-8deg); }
