@@ -52,7 +52,8 @@
       max-width: 700px;
       color: var(--muted);
       line-height: 1.6;
-      font-size: 1rem;
+      font-size: 1.5rem;
+      font-weight: 500;
     }
 
     .reading-area {
