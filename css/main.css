@@ -102,12 +102,9 @@
     }
 
     .deck {
-      position: relative;
-      width: 206px;
-      height: 350px;
-      cursor: pointer;
-      transition: transform 220ms ease;
-      z-index: 5;
+      width: min(50vw, 206px);
+      aspect-ratio: 206 / 350;
+      height: auto;
     }
 
     .deck:hover {
@@ -149,10 +146,12 @@
       position: relative;
       min-height: 520px;
       display: none;
-      grid-template-columns: repeat(3, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.75rem;
       align-items: start;
       padding: 1rem 0.5rem 0;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .spread.active {
@@ -166,6 +165,7 @@
       gap: 1rem;
       position: relative;
       min-height: 430px;
+      min-height: auto;
     }
 
     .card-title {
@@ -177,11 +177,9 @@
     }
 
     .tarot-card {
-      width: 208px;
-      height: 356px;
-      perspective: 1200px;
-      cursor: pointer;
-      position: relative;
+      width: min(100%, 220px);
+      aspect-ratio: 208 / 356;
+      height: auto;
     }
 
     .tarot-card:hover {
@@ -210,8 +208,9 @@
     }
 
     img{
-    width: 100%;
-    object-fit: scale-down;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     } 
 
     .card-front {
@@ -296,3 +295,31 @@
         width: min(420px, 100%);
       }
     }
+
+    @media (max-width: 600px) {
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+  }
+
+  .reading-area {
+    padding: 1rem;
+  }
+
+  .card-copy {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .reset-btn {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.tarot-card:active {
+  transform: scale(0.97);
+}
